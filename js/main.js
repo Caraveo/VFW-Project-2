@@ -30,6 +30,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 		selectList.appendChild(makeSelect);
 	}
+	
+	function saveData(){
+		localStorage.setItem("test", "hello");
+	}
 
 	var leagueGroups = ["--Choose a League--", "Major League Gaming", "National Gaming League", "After Hours Gaming League", "Universal Gaming League", "Global Gaming League", "World Online Gaming League"];
 	makeLeagues();
@@ -40,9 +44,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	var clearLink = $("clearLink");
 	clearLink.addEventListener("click", clearData);
-	
+	*/
 	var saveButton = $("submit");
 	saveButton.addEventListener("click", saveData);
-	*/
+	
 
 });
