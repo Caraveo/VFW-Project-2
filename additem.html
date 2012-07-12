@@ -1,8 +1,13 @@
+
 <!DOCTYPE html>
 
 <!--
 Visual Frameworks 1207
+Full Sail University
+Mobile Development
+Professor: Chad Gibson
 PlayIGL Team Management App
+Project 2
 Jonathan Caraveo 
 -->
 
@@ -24,7 +29,7 @@ Jonathan Caraveo
 			<h2>International Gaming League</h2>
 		</header>
 		
-		<form name="AddTeamMember" action="" method="post">
+		<form name="addTeamMember" action="" method="post">
 			<fieldset>
 				<legend>User Information</legend>
 				<ul>
@@ -32,7 +37,7 @@ Jonathan Caraveo
 					<li><label for="fName">First Name:</label><input type="text" id="fName" /></li>
 					<li><label for="lName">Last Name:</label><input type="text" id="lName" /></li>
 					<li><label for="eMail">eMail:</label><input type="email" id="eMail" placeholder="you@PlayIGL.com" /></li>
-					<li><label for="bDay">Birthday:</label><input type="date" name="bday" /></li>
+					<li><label for="bDay">Birthday:</label><input type="date" name="bDay" /></li>
 					<li><input type="radio" name="sex" value="male" id="male" /><label for="male">Male</label></li>
 					<li><input type="radio" name="sex" value="female" id="female" /><label for="female">Female</label></li>
 					<li><label for="alias">Language:</label><input type="hidden" name="Language" value="English" /> English</li>
@@ -54,16 +59,7 @@ Jonathan Caraveo
 							<option value="int">International</option>
 						</select>
 					</li>
-					<li><label for="leagues">Leagues Played:</label><br />
-						<select multiple="multiple" name="leagues">						  
-							<option value="MLG">Major League Gaming</option>
-					  		<option value="NGL">National Gaming League</option>
-					  		<option value="AHGL">After Hours Gaming League</option>
-					  		<option value="UNGL">Universal Gaming League</option>
-					  		<option value="GGL">Global Gaming League</option>
-					  		<option value="WOGL">World Online Gaming League</option>
-						</select>
-					</li>	
+					<li id="select"><label for="leagues">Leagues Played:</label><br /></li>	
 					<li><label for="notes">Notes:</label><br /><textarea rows="4" cols="32" name="notes" id="notes"></textarea></li>
 				</ul>
 			</fieldset>
