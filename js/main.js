@@ -99,6 +99,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	function getData (){
 		toggle("on");
+		if(localStorage.length === 0){
+			alert("There is no Local Storage Data to display! Sorry.")	
+		}
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement("ul");
@@ -127,14 +130,23 @@ window.addEventListener("DOMContentLoaded", function(){
 	var proValue = "no";
 		makeLeagues();
 
-	
+	function clearData(){
+		if (localStorage.length === 0){
+			alert("There is no data to clear!")
+		}else{
+			localStorage.clear();
+			alert("Local Storage Data has been deleted.")
+			window.location.reload();
+			return false;
+		}
+	}	
 	
 	var displayLink = $("displayLink");
 	displayLink.addEventListener("click", getData);
-	/*
+	
 	var clearLink = $("clearLink");
 	clearLink.addEventListener("click", clearData);
-	*/
+	
 	var saveButton = $("submit");
 	saveButton.addEventListener("click", saveData);
 	
