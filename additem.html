@@ -22,32 +22,39 @@ Jonathan Caraveo
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
 		<title>Team Management</title>
+		<link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<header>
+			<div id="logo"><img src="images/logo.png" /></div>
 			<h1>PlayIGL Team Management App</h1>
-			<h2>International Gaming League</h2>
+			<h2>Welcome to the Big League!</h2>
 		</header>
 		
+		<nav>
+			<a href="#" id="clearLink">Clear Stored Data</a>
+			<a href="#" id="displayLink">Display Data Link</a>
+			<a href="additem.html" id="addMember" style="display:none;">Add Member</a>
+		</nav>
 		<form name="addTeamMember" id="addTeamMember" action="#" method="post">
 			<fieldset>
 				<legend>User Information</legend>
 				<ul>
-					<li><label for="alias">Gamer Alias:</label><input type="text" id="alias" /></li>
-					<li><label for="fName">First Name:</label><input type="text" id="fName" /></li>
-					<li><label for="lName">Last Name:</label><input type="text" id="lName" /></li>
-					<li><label for="eMail">eMail:</label><input type="email" id="eMail" placeholder="you@PlayIGL.com" /></li>
-					<li><label for="bDay">Birthday:</label><input type="date" name="bDay" id="bDay" /></li>
-					<li><input type="radio" name="sex" value="male" id="male" /><label for="male">Male</label></li>
-					<li><input type="radio" name="sex" value="female" id="female" /><label for="female">Female</label></li>
-					<li><label for="alias">Language:</label><input type="hidden" name="Language" value="English" id="language" /> English</li>
+					<li><label for="alias">Gamer Alias: </label><input type="text" id="alias" /></li>
+					<li><label for="fName">First Name: </label><input type="text" id="fName" /></li>
+					<li><label for="lName">Last Name: </label><input type="text" id="lName" /></li>
+					<li><label for="eMail">eMail: </label><input type="email" id="eMail" placeholder="you@PlayIGL.com" /></li>
+					<li><label for="bDay">Birthday: </label><input type="date" name="bDay" id="bDay" /></li>
+					<li><input type="radio" name="sex" value="male" id="male" /><label for="male"> Male</label></li>
+					<li><input type="radio" name="sex" value="female" id="female" /><label for="female"> Female</label></li>
+					<li><label for="alias">Language: </label><input type="hidden" name="Language" value="English" id="language" /> English</li>
 				</ul>
 			</fieldset>			
 			<fieldset>
 				<legend>Gaming Information</legend>
 				<ul>
-					<li><label for="skill">Skill Level:</label><input type="range" name="skill" min="1" max="10" id="skill"/></li>
-					<li>Are you a Professional Gamer?:</li>
+					<li><label for="skill">Skill Level: </label><input type="range" name="skill" min="1" max="10" id="skill"/></li>
+					<li>Are you a Professional Gamer?</li>
 					<li><input type="checkbox" name="pro" value="Yes" id="pro" /><label for="pro">Yes</label></li>
 					<li><label for="division">Gaming Division:</label>
 						<select name="division" id="division">
@@ -65,11 +72,7 @@ Jonathan Caraveo
 		</form>
 		
 		<footer>
-			<nav>
-				<a href="#" id="clearLink">Clear Stored Data</a>
-				<a href="#" id="displayLink">Display Data Link</a>
-				<a href="additem.html" id="addMember" style="display:none;">Add Member</a>
-			</nav>
+
 		</footer>
 		<script src="js/main.js" type="text/javascript"></script>
 	</body>
