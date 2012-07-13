@@ -52,6 +52,26 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
+	function toggle(parameter){
+		switch(parameter){
+			case "on":
+				$("addTeamMember").style.display = "none";
+				$("clearLink").style.display = "inline";
+				$("displayLink").style.display = "none";
+				$("addMember").style.display = "inline";
+				break;
+			case "off":
+				$("addMemberForm").style.display = "block";
+				$("clear").style.display = "inline";
+				$("displayLink").style.display = "inline";
+				$("addMember").style.display = "none";
+				$("items").style.display = "none";
+				break;
+			default:
+				return false;
+		}
+	}
+	
 	function saveData(){
 		var id = Math.floor(Math.random()*1010101010);
 		getSelectedRadio();
@@ -78,11 +98,13 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 	
 	function getData (){
+		toggle("on");
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement("ul");
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
+		$("items").style.display = "display";
 		for(var i=0, len=localStorage.length; i<len; i++){
 			var makeLi = document.createElement("li");
 			makeList.appendChild(makeLi);
